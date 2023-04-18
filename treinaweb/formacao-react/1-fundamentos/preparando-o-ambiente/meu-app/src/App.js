@@ -4,7 +4,7 @@ import TextCounter from './components/TextCounter';
 function App() {
   return (
     <div className="App">
-      <TextCounter />
+      <TextCounter limit={5} />
     </div>
   );
 }

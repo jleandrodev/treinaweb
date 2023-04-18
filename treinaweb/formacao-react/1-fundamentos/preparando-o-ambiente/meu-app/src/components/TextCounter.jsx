@@ -1,15 +1,19 @@
-import { Component } from "react"
+import { useState } from "react"
 
-export default function TextCounter() {
+export default function TextCounter({limit}) {
+
+  const [text, setText] = useState('')
+
   return (
-    <div></div>
+    <div>
+      <input 
+        type="text" 
+        maxLength={limit} 
+        value={text}
+        onChange={(event) => setText(event.target.value)}
+      />
+      {text.length}/{limit}
+    </div>
   )
 }
 
-export class TextCounter2 extends Component {
-  render(){
-    return (
-      <div></div>
-    )
-  }
-}
