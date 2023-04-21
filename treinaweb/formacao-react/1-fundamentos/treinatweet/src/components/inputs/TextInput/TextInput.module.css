@@ -3,7 +3,8 @@
   border: 1px solid var(--border);
   width: 100%;
   padding: 4px;
-  resize: vertical
+  resize: vertical;
+  border-radius: 3px
 }
 
 .input:focus {

@@ -1,0 +1,63 @@
+.page-title {
+  font-size: 24px;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 0;
+  margin: 0 0 16px;
+}
+
+.tweet-container {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 16px;
+
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%
+}
+
+.tweet-button {
+  font-size: 16px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer
+
+}
+
+.tweet-button:hover {
+  opacity: 0.7
+}
+
+.tweet-button:disabled {
+  background: var(--primary-light);
+  pointer-events: none;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: end;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px
+}
+
+.tweet-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0
+}
+
+.tweet-item {
+  padding: 16px 0
+}
+
+.tweet-item:not(:last-child) {
+  border-bottom: 1px solid var(--border)
+}
