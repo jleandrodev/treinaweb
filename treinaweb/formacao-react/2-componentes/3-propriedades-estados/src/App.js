@@ -1,13 +1,14 @@
 import './App.css';
 
-function Treinaweb(props) {
+function Treinaweb({ nome, sobrenome, idade, ...props }) {
   return (
     <div>
       <ul>
-        <li>{ props.nome }</li>
-        <li>{ props.sobrenome }</li>
-        <li>{ props.idade }</li>
+        <li>{ nome }</li>
+        <li>{ sobrenome }</li>
+        <li>{ idade }</li>
       </ul>
+      <input type='text' {...props} />
     </div>
   )
 }
@@ -16,7 +17,9 @@ function App() {
   const pessoa = {
     nome: 'Jhonatan',
     sobrenome: 'Ozório',
-    idade: 30
+    idade: 30,
+    value: 'Jhonatan Ozório',
+    onClick: () => {}
   }
   return (
     <div className="App">
