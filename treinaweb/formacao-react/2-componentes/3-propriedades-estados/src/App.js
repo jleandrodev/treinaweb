@@ -1,29 +1,24 @@
+import { useState } from 'react';
 import './App.css';
 
-function Treinaweb({ nome, sobrenome, idade, ...props }) {
+function Treinaweb(props) {
   return (
     <div>
-      <ul>
-        <li>{ nome }</li>
-        <li>{ sobrenome }</li>
-        <li>{ idade }</li>
-      </ul>
-      <input type='text' {...props} />
+      <span>{props.nome}</span>
     </div>
   )
 }
 
 function App() {
-  const pessoa = {
-    nome: 'Jhonatan',
-    sobrenome: 'Ozório',
-    idade: 30,
-    value: 'Jhonatan Ozório',
-    onClick: () => {}
-  }
+
+  const [ contador, setContador ] = useState(5)
+
+  
+  
   return (
     <div className="App">
-      <Treinaweb {...pessoa} />
+      <Treinaweb nome={contador} /> 
+      <button onClick={() => setContador(9)}>CLICK</button>
     </div>
   );
 }
