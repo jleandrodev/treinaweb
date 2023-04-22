@@ -10,6 +10,7 @@ function Lista(props) {
       <li>Karen</li>
       <li>Maria</li>
       <li>João</li>
+      {props.children}
     </React.Fragment>
   )
 }
@@ -19,7 +20,9 @@ function App() {
   return (
     <div className="App">
       <ul>
-        <Lista />
+        <Lista>
+          <h2>Contador</h2>
+        </Lista>
       </ul>
     </div>
   );
