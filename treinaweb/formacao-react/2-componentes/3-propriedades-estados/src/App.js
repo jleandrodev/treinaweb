@@ -28,6 +28,10 @@ function App() {
     {id: 3, nome: 'Mauricio', idade: '20'},
     {id: 4, nome: 'Leticia', idade: '25'},
   ]
+
+  function falarNome (nome) {
+    console.log(nome)
+  }
   
   return (
     <div className="App">
@@ -35,7 +39,7 @@ function App() {
         {
           minhaLista.map(el => {
             return (
-            <li key={el.id}>
+            <li key={el.id} onClick={() => falarNome(el.nome)}>
               Nome: {el.nome}, idade: {el.idade}
             </li>
             )
