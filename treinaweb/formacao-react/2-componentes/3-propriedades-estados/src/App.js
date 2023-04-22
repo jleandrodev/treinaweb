@@ -22,14 +22,26 @@ function Treinaweb(props) {
 
 function App() {
 
-  const [ contador, setContador ] = useState(0)  
+  const minhaLista = [
+    {nome: 'Jhone', idade: '30'},
+    {nome: 'Jose', idade: '54'},
+    {nome: 'Mauricio', idade: '20'},
+    {nome: 'Leticia', idade: '25'},
+  ]
   
   return (
     <div className="App">
-      <button onClick={() => setContador(contador + 1)}>CLICK 1 - {contador}</button>
-      {
-        contador % 2 === 0 && <Treinaweb nome={contador} />
-      }
+      <ul>
+        {
+          minhaLista.map(el => {
+            return (
+            <li>
+              Nome: {el.nome}, idade: {el.idade}
+            </li>
+            )
+          })
+        }
+      </ul>
     </div>
   );
 }
