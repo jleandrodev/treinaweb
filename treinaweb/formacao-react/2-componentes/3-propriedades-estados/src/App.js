@@ -11,14 +11,17 @@ function Treinaweb(props) {
 
 function App() {
 
-  const [ contador, setContador ] = useState(5)
+  const [ contador, setContador ] = useState(0)
 
+  function handleClick() {
+    setContador(contador + 1)
+  }
   
   
   return (
     <div className="App">
       <Treinaweb nome={contador} /> 
-      <button onClick={() => setContador(9)}>CLICK</button>
+      <button onClick={handleClick}>Incrementa</button>
     </div>
   );
 }
