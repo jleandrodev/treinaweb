@@ -4,8 +4,12 @@ import './App.css';
 function Treinaweb(props) {
 
   useEffect(() => {
+    const meuIntervalo = setInterval(() => {
+      console.log("Olá")
+    }, 2000)
     console.log('Componente criado')
     return () => {
+      clearInterval(meuIntervalo)
       console.log('Componente removido')
     }
   }, [])
