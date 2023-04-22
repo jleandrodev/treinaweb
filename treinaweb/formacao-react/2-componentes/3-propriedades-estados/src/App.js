@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function Treinaweb(props) {
@@ -12,16 +12,19 @@ function Treinaweb(props) {
 function App() {
 
   const [ contador, setContador ] = useState(0)
+  const [ contador2, setContador2 ] = useState(0)
 
-  function handleClick(numero) {
-    setContador(contador + numero)
-  }
+
+
+  useEffect(() => {
+    console.log(contador2)
+  }, [contador2])
   
   
   return (
     <div className="App">
-      <Treinaweb nome={contador} /> 
-      <button onClick={() => handleClick(10)}>Incrementa</button>
+      <button onClick={() => setContador(contador + 1)}>CLICK 1 - {contador}</button>
+      <button onClick={() => setContador2(contador2 + 1)}>CLICK 2 - {contador2}</button>
     </div>
   );
 }
