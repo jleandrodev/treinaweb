@@ -23,10 +23,10 @@ function Treinaweb(props) {
 function App() {
 
   const minhaLista = [
-    {nome: 'Jhone', idade: '30'},
-    {nome: 'Jose', idade: '54'},
-    {nome: 'Mauricio', idade: '20'},
-    {nome: 'Leticia', idade: '25'},
+    {id: 1, nome: 'Jhone', idade: '30'},
+    {id: 2, nome: 'Jose', idade: '54'},
+    {id: 3, nome: 'Mauricio', idade: '20'},
+    {id: 4, nome: 'Leticia', idade: '25'},
   ]
   
   return (
@@ -35,7 +35,7 @@ function App() {
         {
           minhaLista.map(el => {
             return (
-            <li>
+            <li key={el.id}>
               Nome: {el.nome}, idade: {el.idade}
             </li>
             )
