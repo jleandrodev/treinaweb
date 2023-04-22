@@ -13,15 +13,15 @@ function App() {
 
   const [ contador, setContador ] = useState(0)
 
-  function handleClick() {
-    setContador(contador + 1)
+  function handleClick(numero) {
+    setContador(contador + numero)
   }
   
   
   return (
     <div className="App">
       <Treinaweb nome={contador} /> 
-      <button onClick={handleClick}>Incrementa</button>
+      <button onClick={() => handleClick(10)}>Incrementa</button>
     </div>
   );
 }
