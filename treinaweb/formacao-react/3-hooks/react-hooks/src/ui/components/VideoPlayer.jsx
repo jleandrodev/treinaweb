@@ -1,17 +1,13 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useContext, useEffect, useRef, useState} from 'react'
 import { TimeService } from '../../data/services/TimeService'
+import { videoStore } from '../../data/video/VideoContext'
 
-const _selectedVideo = {
-  id: 1,
-  title: 'Como fazer um bolo de chocolate',
-  duration: 23,
-  url: 'https://joy1.videvo.net/videvo_files/video/free/2019-07/small_watermarked/190625_04_CityMisc_HD_05_preview.webm',
-  cover: 'https://images.freeimages.com/images/previews/fca/peppers-falling-into-water-1142701.jpg'
-}
 
 export default function VideoPlayer() {
 
-  const video = _selectedVideo
+  const [videos] = useContext(videoStore)
+
+  const video = videos.selectedVideo
   const videoRef = useRef()
   const [ isPlaying, setPlay ] = useState(false)
   const [ progress, setProgress ] = useState(0)
