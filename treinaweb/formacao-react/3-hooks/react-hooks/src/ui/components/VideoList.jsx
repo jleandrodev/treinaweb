@@ -5,16 +5,19 @@ import { videoStore } from "../../data/video/VideoContext";
 
 export default function VideoList(props) {
 
-  const [videoState] = useContext(videoStore)
+  const [videoState, videoDispath] = useContext(videoStore)
 
   function onClick(video) {
-    console.log(video)
+    videoDispath({
+      type: 'select',
+      value: video
+    })
   }
 
   return (
     <ul className="list">
       {
-        videoState.list.map(item => (
+        videoState.videos.map(item => (
           <Video key={item.id} video={item} onClick={onClick} />
         ))
       }
