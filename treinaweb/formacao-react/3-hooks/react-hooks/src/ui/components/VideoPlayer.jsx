@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useRef, useState} from 'react'
+import React, {useContext, useEffect, useMemo, useRef, useState} from 'react'
 import { TimeService } from '../../data/services/TimeService'
 import { videoStore } from '../../data/video/VideoContext'
 
@@ -12,6 +12,7 @@ export default function VideoPlayer() {
   const [ isPlaying, setPlay ] = useState(false)
   const [ progress, setProgress ] = useState(0)
   const progressTimer = useRef()
+  const totalTime = useMemo(() => TimeService.formatTime(video.duration), [video])
 
   useEffect(() => {
     const videoElement = videoRef.current
@@ -76,7 +77,7 @@ export default function VideoPlayer() {
           <button onClick={isPlaying ? pause : play}>
             { isPlaying ? '||' : '|>' }
           </button>
-          <span>{TimeService.formatTime(Math.round(progress))} / {TimeService.formatTime(video.duration)}</span>
+          <span>{TimeService.formatTime(Math.round(progress))} / {totalTime}</span>
           <input 
             type="range" 
             value={progress} 
