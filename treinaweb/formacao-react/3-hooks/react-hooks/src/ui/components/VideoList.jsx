@@ -1,6 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Video from "./Video";
 import { videoStore } from "../../data/video/VideoContext";
+import { StorageService } from "../../data/services/StorageService";
+import { videoListInitial } from "../../data/services/VideoListInitial";
 
 
 export default function VideoList(props) {
@@ -13,6 +15,10 @@ export default function VideoList(props) {
       value: video
     })
   }
+
+  useEffect(() => {
+    StorageService.initial(videoListInitial)
+  }, [])
 
   return (
     <ul className="list">

@@ -15,5 +15,13 @@ export const StorageService = {
       value = JSON.stringify(value)
     }
     localStorage.setItem(key, value)
+  },
+
+  initial(videoListInitial) {
+    const list = localStorage.getItem('videoList')
+    console.log(videoListInitial)
+    if(!list) {
+      localStorage.setItem('videoList', JSON.stringify(videoListInitial))
+    }
   }
 }
