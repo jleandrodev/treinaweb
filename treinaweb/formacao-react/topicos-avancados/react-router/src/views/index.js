@@ -1,5 +1,13 @@
 import React from "react"
+import ClickCounter from "../components/ClickCounter"
 
-const Index = () => <h1>Home</h1>
-
+const Index = () => {
+  return (
+    <div>
+      <h1>Home</h1>
+      <ClickCounter />
+    </div>
+  )
+  
+} 
 export default Index
