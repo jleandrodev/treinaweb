@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 
 window.treinaweb.start()
@@ -18,8 +18,17 @@ function MeuComponente ({name} : MeuComponenteProps) {
   const [counter, setCounter] = useState<number>()
   const [user, setUser] = useState<User>({} as User)
 
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    videoRef.current?.play()
+  }, [])
+
   return (
-    <h1>Hello</h1>
+    <>
+      <h1>Hello</h1>
+      <video ref={videoRef} src="" />
+    </>
   )
 }
 
