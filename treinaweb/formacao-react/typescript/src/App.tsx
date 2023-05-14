@@ -4,7 +4,8 @@ import './App.css';
 window.treinaweb.start()
 
 export interface MeuComponenteProps {
-  name: string
+  name?: string
+  children: JSX.Element | JSX.Element[] | string
 }
 
 function MeuComponente ({name} : MeuComponenteProps) {
@@ -16,7 +17,9 @@ function MeuComponente ({name} : MeuComponenteProps) {
 function App() {
   return (
     <div className="App">
-      <MeuComponente name='John Doe' />
+      <MeuComponente name='John Doe'>
+        Meu Componente
+      </MeuComponente>
     </div>
   );
 }
