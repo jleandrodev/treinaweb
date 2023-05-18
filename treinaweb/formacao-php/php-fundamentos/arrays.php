@@ -26,3 +26,8 @@ echo "<br>";
 echo $curso["versao"];
 echo "<br>";
 echo $curso["status"];
+
+$linguagens[3] = "Python";
+
+echo "<br>";
+var_dump($linguagens);
