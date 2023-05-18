@@ -1,6 +1,6 @@
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-const { Typography, Button  } = MaterialUI
+const { Typography, Button, Icon  } = MaterialUI
 
 function MeuP () {
   return <Typography>Olá mundo</Typography>
@@ -17,6 +17,8 @@ root.render(
     <Button sx={{ m: "8px" }}>Click</Button>
     <Button sx={{ m: 2 }} variant="outlined">Click</Button>
     <Button variant="contained">Click</Button>
+    <Icon>home</Icon>
+    <Icon>delete</Icon>
   </>
 
   )
