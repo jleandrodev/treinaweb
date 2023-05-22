@@ -15,20 +15,19 @@ const Item = styled(Paper)`
   color: #fff;
 `
 
-function App() {
+function Layout() {
   return (
-    <div className="App">
       <Container>
         <Grid container spacing={2} component={'header'}>
-          <Grid item xs={2}>
+          <Grid item xs={2} sm={3} >
             <Item>Logo</Item>
           </Grid>
-          <Grid item xs={10} component={'nav'}>
+          <Grid component={'nav'} item xs={10} sm={9} >
             <Item>Menu</Item>
           </Grid>
         </Grid>
         <Grid container spacing={2}>
-          <Grid item xs={6} >
+          <Grid item xs={6}>
             <Paragrafo />
           </Grid>
 
@@ -50,6 +49,16 @@ function App() {
           </Grid>
         </Grid>
       </Container>
+
+  )
+
+}
+
+
+function App() {
+  return (
+    <div className="App">
+      <Layout />
     </div>
   );
 }
