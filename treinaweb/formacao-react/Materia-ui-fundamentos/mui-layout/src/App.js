@@ -15,6 +15,15 @@ const Item = styled(Paper)`
   color: #fff;
 `
 
+const GridStyled = styled(Grid)`
+  background-color: #1A2027;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+`
+
 function Layout() {
   return (
       <Container>
@@ -54,11 +63,33 @@ function Layout() {
 
 }
 
+function TemplateGrid() {
+  return (
+    <Grid 
+      container
+      direction={'row'}
+      justifyContent={'flex-start'}
+      alignItems={'flex-start'}
+      sx={{ bgcolor: '#0a5483', height: '100vh' }}
+      >
+      <GridStyled item sx={{ p: 1 }}>
+        Item 1
+      </GridStyled>
+      <GridStyled item sx={{ p: 2 }}>
+        Item 2
+      </GridStyled>
+      <GridStyled item sx={{ p: 3 }}>
+        Item 3
+      </GridStyled>
+    </Grid>
+  )
+}
+
 
 function App() {
   return (
     <div className="App">
-      <Layout />
+      <TemplateGrid />
     </div>
   );
 }
