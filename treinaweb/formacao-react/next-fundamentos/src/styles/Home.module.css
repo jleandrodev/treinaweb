@@ -1,0 +1,11 @@
+.title {
+  text-align: center;
+  color: var(--primary);
+  box-shadow: 0 3px 0 var(--shadow);
+  padding: 16px;
+  margin-top: 0;
+}
+
+.title-second-word {
+  color: var(--secondary)
+}
