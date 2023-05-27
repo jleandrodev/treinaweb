@@ -10,5 +10,10 @@ class Cliente
     public $endereco;
 
     public $telefone;
+
+    public function comprar()
+    {
+        echo "Compra realizada";
+    }
 }
 

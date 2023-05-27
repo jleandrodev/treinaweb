@@ -8,7 +8,7 @@ class Produto
 
     public $titulo;
 
-    public $descricao;
+    public $descricao = "Cerveja brasileira";
 
     public $preco;
 }
