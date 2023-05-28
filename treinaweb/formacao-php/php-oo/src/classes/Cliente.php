@@ -13,7 +13,7 @@ class Cliente
 
     public function comprar()
     {
-        echo "Compra realizada";
+        echo "{$this->nome} realizou uma compra.";
     }
 }
 
