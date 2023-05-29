@@ -3,13 +3,13 @@
 class Cliente
 {
     //declarações
-    public $nome;
+    public string $nome;
 
-    public $idade;
+    public int $idade;
 
-    public $endereco;
+    public string $endereco;
 
-    public $telefone;
+    public string $telefone;
 
     public function comprar()
     {
