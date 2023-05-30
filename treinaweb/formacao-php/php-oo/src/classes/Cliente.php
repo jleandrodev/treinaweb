@@ -11,7 +11,7 @@ class Cliente
 
     public string $telefone;
 
-    public function comprar()
+    public function comprar(): void
     {
         echo "{$this->nome} realizou uma compra.";
     }
