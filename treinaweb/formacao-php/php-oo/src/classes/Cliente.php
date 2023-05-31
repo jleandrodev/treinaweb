@@ -22,5 +22,10 @@ class Cliente
         $this->telefone = $telefone;
         $this->idade = $idade;
     }
+
+    public function __destruct()
+    {
+        echo "O Obj foi destruido";
+    }
 }
 
