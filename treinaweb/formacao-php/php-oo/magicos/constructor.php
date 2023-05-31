@@ -11,4 +11,10 @@ $cli->alterar("JL", 29);
 
 $cli(true);
 
-var_dump($cli);
+$cliSerializado = serialize($cli);
+
+echo "<br>" . $cliSerializado . "<br>";
+
+$cli2 = unserialize($cliSerializado);
+
+var_dump($cli, $cli2);

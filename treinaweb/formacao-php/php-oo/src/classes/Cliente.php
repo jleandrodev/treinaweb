@@ -55,6 +55,16 @@ class Cliente
         $this->status = $status;
     }
 
+    public function __sleep() : array
+    {
+        return ["nome", "idade"];
+    }
+
+    public function __wakeup() : void
+    {
+        $this->tipo = "Serializado";
+    }
+
 
 }
 
