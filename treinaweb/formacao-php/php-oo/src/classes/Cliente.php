@@ -15,5 +15,12 @@ class Cliente
     {
         echo "{$this->nome} realizou uma compra.";
     }
+
+    public function __construct(string $nome, string $telefone, int $idade)
+    {
+        $this->nome = $nome;
+        $this->telefone = $telefone;
+        $this->idade = $idade;
+    }
 }
 
