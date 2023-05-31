@@ -1,8 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/src/styles/Home.module.css'
 import useIndex from '../data/hooks/pages/useIndex.page'
+import PostList from '../ui/components/PostList/PostList'
 
 
 export default function Home() {
@@ -18,7 +16,7 @@ export default function Home() {
       </Head>
 
       <main>
-        
+        <PostList posts={posts}/>
       </main>
     </div>
   )

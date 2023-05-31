@@ -1,0 +1,39 @@
+.post-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 16px auto;
+    max-width: 1024px
+
+}
+
+.post-list-item {
+    padding: 16px;
+    max-width: 320px;
+    color: var(--text-secondary);
+    box-shadow: 0 1px 3px var(--shadow);
+    border-radius: 4px
+
+}
+
+.post-list-item:hover {
+    transform: scale(1.01)
+}
+
+@media(max-width: 780px) {
+    .post-list-item{
+        max-width: 100%
+    }
+}
+
+.post-picture{
+    width: 100%
+}
+
+.post-title {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 20px
+}

@@ -6,5 +6,5 @@ export interface BlogPost {
     description: string
     picture: string
     slug: string
-    content?: JsxElement
+    content?: string
 }
