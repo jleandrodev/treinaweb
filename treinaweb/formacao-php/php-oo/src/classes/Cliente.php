@@ -41,5 +41,20 @@ class Cliente
             $this->$name = $value;
         }
     }
+
+    public function __call(string $name, array $arguments)
+    {
+        if ($name === 'alterar') {
+            $this->nome = $arguments[0];
+            $this->idade = $arguments[1];
+        }
+    }
+
+    public function __invoke(bool $status)
+    {
+        $this->status = $status;
+    }
+
+
 }
 
