@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/services', function () {
     echo "Serviços";
 });
+
+Route::get('/service/{id}', function (int $id) {
+    echo "Verificando o serviço com id $id";
+});
