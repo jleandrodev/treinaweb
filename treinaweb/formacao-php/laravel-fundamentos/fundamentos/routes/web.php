@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    echo "Home";
-});
+Route::get('/', [SiteController::class, 'index']);
 
-Route::get('/services', function () {
-    echo "Serviços";
-});
+Route::get('/services', [SiteController::class, 'services']);
 
-Route::get('/service/{id}', function (int $id) {
-    echo "Verificando o serviço com id $id";
-});
+Route::get('/service/{id}',[SiteController::class, 'service']);
