@@ -18,4 +18,6 @@ Route::get('/', [SiteController::class, 'index']);
 
 Route::get('/services', [SiteController::class, 'services']);
 
-Route::get('/service/{id}',[SiteController::class, 'service']);
+Route::get('/service/{id}', [SiteController::class, 'service']);
+
+Route::get('/saudacao/{id}', [SiteController::class, 'saudacao']);

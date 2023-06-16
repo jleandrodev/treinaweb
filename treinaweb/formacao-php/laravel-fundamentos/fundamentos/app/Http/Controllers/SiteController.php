@@ -8,7 +8,7 @@ class SiteController extends Controller
 {
     public function index()
     {
-        echo "Home";
+        return view('home');
     }
     public function services()
     {
@@ -17,5 +17,10 @@ class SiteController extends Controller
     public function service(int $id)
     {
         echo "Verificando o serviço com id $id";
+    }
+
+    public function saudacao(string $nome = 'Treinaweb')
+    {
+        return view('saudacao', ['nome' => $nome]);
     }
 }
