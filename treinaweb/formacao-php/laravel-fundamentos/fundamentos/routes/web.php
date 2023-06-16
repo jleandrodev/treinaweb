@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SiteController;
+use App\Models\Client;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,7 @@ Route::get('/services', [SiteController::class, 'services']);
 Route::get('/service/{id}', [SiteController::class, 'service']);
 
 Route::get('/saudacao/{id}', [SiteController::class, 'saudacao']);
+
+Route::get('/clients', function () {
+    dd(Client::get());
+});
